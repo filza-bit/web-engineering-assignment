@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cafe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>My Cafe</h1>
+        <p class="tagline">Fresh Coffee • Delicious Moments</p>
+        <p id="opening-status"></p>
+        <button type="button" id="theme-btn">Switch to Dark Mode</button>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Customer Feedback</h2>
+
+            <form id="feedback-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+
+                <label for="special-notes">Special Request:</label>
+                <textarea id="special-notes" maxlength="100"
+                    placeholder="Tell us your preferences..."></textarea>
+                <p id="character-count">100 characters remaining</p>
+
+                <label for="birth-year">Birth Year:</label>
+                <input type="number" id="birth-year"
+                    min="1900" required placeholder="e.g. 2004">
+
+                <button type="submit">Submit Feedback</button>
+            </form>
+
+            <p id="form-message" aria-live="polite"></p>
+        </section>
+
+        <section class="menu-section">
+            <h2>Our Menu</h2>
+            <p class="section-description">Choose your favorites!</p>
+
+            <div class="filter-buttons">
+                <button type="button" id="all-btn">All</button>
+                <button type="button" id="drinks-btn">Drinks</button>
+                <button type="button" id="pastries-btn">Pastries</button>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Menu Item</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="menu-row" data-category="Drinks">
+                        <td>
+                            <label class="item-label">
+                                <input type="checkbox" class="item" value="3">
+                                Espresso
+                            </label>
+                        </td>
+                        <td>$3</td>
+                    </tr>
+
+                    <tr class="menu-row" data-category="Drinks">
+                        <td>
+                            <label class="item-label">
+                                <input type="checkbox" class="item" value="5">
+                                Cappuccino
+                            </label>
+                        </td>
+                        <td>$5</td>
+                    </tr>
+
+                    <tr class="menu-row" data-category="Pastries">
+                        <td>
+                            <label class="item-label">
+                                <input type="checkbox" class="item" value="4">
+                                Croissant
+                            </label>
+                        </td>
+                        <td>$4</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p id="total">Total: $0</p>
+        </section>
+
+        <section class="about-section">
+            <h2>About Our Cafe</h2>
+
+            <p>
+                Welcome to our cafe! We serve fresh coffee, delicious snacks,
+                and tasty desserts in a comfortable environment.
+            </p>
+
+            <p id="extra-text" hidden>
+                Our cafe is a friendly place where customers can relax,
+                meet friends, study, and enjoy freshly prepared food and drinks.
+            </p>
+
+            <button type="button" id="read-more-btn">Read More</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Made with love and coffee.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
