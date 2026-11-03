@@ -1,0 +1,271 @@
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --page-bg: #f8f3eb;
+    --card-bg: #fffdf9;
+    --text: #3e2723;
+    --heading: #6f3e2e;
+    --muted: #80695b;
+    --accent: #805239;
+    --accent-hover: #a66a45;
+    --border: #e7d7c5;
+    --table-hover: #f0e2d2;
+    --total-bg: #ead8c5;
+    --input-bg: #ffffff;
+    --shadow: 0 6px 20px rgba(62, 39, 35, 0.08);
+}
+
+body.dark-mode {
+    --page-bg: #211b19;
+    --card-bg: #302724;
+    --text: #f5e9dc;
+    --heading: #e7b78e;
+    --muted: #d0b9a7;
+    --accent: #946344;
+    --accent-hover: #b78354;
+    --border: #55443b;
+    --table-hover: #49382f;
+    --total-bg: #49382f;
+    --input-bg: #3a302b;
+    --shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+body {
+    margin: 0;
+    padding: 30px 20px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--page-bg);
+    color: var(--text);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+h1 {
+    color: var(--heading);
+    font-size: 44px;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.tagline {
+    color: var(--muted);
+    margin: 5px 0 15px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    color: var(--heading);
+    margin-top: 0;
+}
+
+#opening-status {
+    font-weight: bold;
+    margin: 12px 0;
+}
+
+main {
+    max-width: 850px;
+    margin: auto;
+}
+
+section {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 30px;
+    box-shadow: var(--shadow);
+    transition: background-color 0.3s;
+}
+
+button {
+    background: var(--accent);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 11px 20px;
+    margin: 5px;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+button:hover {
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--accent-hover);
+    outline-offset: 3px;
+}
+
+#theme-btn {
+    margin-top: 5px;
+}
+
+label {
+    display: block;
+    margin: 15px 0 6px;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font: inherit;
+    background: var(--input-bg);
+    color: var(--text);
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--accent-hover);
+    outline: none;
+}
+
+#character-count {
+    text-align: right;
+    color: var(--muted);
+    font-size: 13px;
+    margin: 5px 0;
+}
+
+#feedback-form button[type="submit"] {
+    width: 100%;
+    margin: 22px 0 0;
+}
+
+#form-message {
+    color: var(--heading);
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.section-description {
+    color: var(--muted);
+}
+
+.filter-buttons {
+    margin: 15px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th {
+    background: var(--accent);
+    color: #ffffff;
+    text-align: left;
+    padding: 14px 18px;
+}
+
+td {
+    padding: 15px 18px;
+    border-bottom: 1px solid var(--border);
+}
+
+td:last-child {
+    text-align: right;
+    font-weight: bold;
+    color: var(--heading);
+}
+
+.menu-row {
+    transition: background-color 0.2s;
+}
+
+.menu-row:hover {
+    background: var(--table-hover);
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.item-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+input[type="checkbox"] {
+    accent-color: var(--accent);
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+}
+
+#total {
+    background: var(--total-bg);
+    color: var(--text);
+    padding: 15px 20px;
+    text-align: right;
+    font-size: 21px;
+    font-weight: bold;
+    border-radius: 10px;
+    margin: 18px 0 0;
+}
+
+.about-section p {
+    color: var(--muted);
+}
+
+footer {
+    text-align: center;
+    color: var(--muted);
+    padding: 10px;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    button {
+        padding: 10px 14px;
+    }
+
+    td,
+    th {
+        padding: 12px 10px;
+    }
+}
